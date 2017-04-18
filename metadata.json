@@ -1,7 +1,7 @@
 {
     "name":"Queens",
     "widgetVersion": 2,
-    "thumbnail":"kings.png",
+    "thumbnail":"queens.png",
     "templateType":"standard",
     "pageTypes": [ "home", "slideshow" ],
     "screenshot":"queens-screenshot.jpg",
