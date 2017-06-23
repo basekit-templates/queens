@@ -202,7 +202,7 @@
             "color__slideshow-description--text" : "#bebebe"
         },
         "feature": {
-            "color__feature-content--background": "#26292f",
+            "color__feature-content--background": "fade(#26292f, 70%)",
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "72px",
             "font__feature-headline--font-weight" : "700",
