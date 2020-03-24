@@ -133,8 +133,7 @@ body#migrated-site {
     
     
     // Adds spacing to a section when a widget follows it
-    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
-    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    #page-zones__main > [data-name="row"]:not(.style--light) + .widget:not([data-name="row"]),
     &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
     #page-zones__main > .widget:not([data-name="row"]):first-child {
         padding-top: 70px;
@@ -157,6 +156,11 @@ body#migrated-site {
         @media @mobile {
             padding-bottom: 30px;
         }
+    }
+    
+    
+    #page-zones__main > .widget:not([data-name="row"]) + .style--light .row__container {
+        padding-top: 0;
     }
     
     
