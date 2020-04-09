@@ -1,0 +1,181 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+body#migrated-site {
+    padding: 0;
+}
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    .site-container {
+        padding: 0 35px;
+        background-color: #e0e0e0;
+        
+        @media @mobile {
+            padding: 0 10px;
+        }
+        
+        &.edit {
+            @media only screen and (max-width: 1279px) {
+                padding: 0;
+            }
+        }
+    }
+    
+    .main-content {
+        margin-top: 0;
+    }
+    
+    .main-content [data-name="row"] .widget {
+        margin: 0;
+
+        + .widget {
+            margin-top: 16px!important;
+        }
+    }
+    
+    
+    .row-overlay:before,
+    .row-overlay:after {
+        width: 135px;
+    }
+    .row-overlay:before {
+        left: -35px;
+    }
+    .row-overlay:after {
+        right: -35px;
+    }
+    
+    &.is-move-mode .template-header,
+    &.row-editing .template-header {
+        display: none;
+    }
+
+
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]) {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-bottom: 70px;
+        
+        @media @tablet {
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+        }
+        @media @mobile {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    [data-name="responsivecolumns"] {
+        margin-left: 70px;
+        margin-right: 70px;
+        
+        @media @tablet {
+            margin-left: 40px;
+            margin-right: 40px;
+
+        }
+        @media @mobile {
+            margin-left: 30px;
+            margin-right: 30px;
+
+        }
+    }
+    
+    .main-content [data-name="responsivecolumns"] .widget {
+        margin-top: 30px;
+        
+        @media @mobile {
+            margin-top: 20px;
+        }
+    }
+    
+    
+    // Full width widgets
+    .main-content #page-zones__main > {
+        .widget[data-name="responsiveslideshow"],
+        .widget[data-widget-type="responsiveslideshow"],
+        .widget[data-name="youtube"],
+        .widget[data-name="map"],
+        .widget[data-name="youtube"],
+        .widget[data-name="gallery"],
+        .widget[data-name="blogpostlist"],
+        .widget[data-widget-type="blogpostlist"],
+        .widget[data-name="blogpost"],
+        .widget[data-widget-type="blogpost"],
+        .widget[data-name="ecomproductslist"],
+        .widget[data-name="ecomproduct"],
+        .widget[data-name="ecomfeaturedproducts"],
+        .widget[data-name="line"],
+        .widget[data-name="menusections"],
+        .widget[data-name="menu"],
+        .widget[data-name="image"] {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"]:not(.style--light) + .widget:not([data-name="row"]),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        padding-top: 70px;
+        
+        @media @tablet {
+            padding-top: 40px;
+        }
+        @media @mobile {
+            padding-top: 30px;
+        }
+    }
+    
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        padding-bottom: 70px;
+        margin-bottom: 0;
+        
+        @media @tablet {
+            padding-bottom: 40px;
+        }
+        @media @mobile {
+            padding-bottom: 30px;
+        }
+    }
+    
+    
+    #page-zones__main > .widget:not([data-name="row"]) + .style--light .row__container {
+        padding-top: 0;
+    }
+    
+    
+    // Widget styles
+    [data-name="row"] {
+        [data-name="content"] .content {
+            max-width: 100%;
+        }
+        .social-link:before {
+            background-color: inherit;
+        }
+    }
+}
+    
